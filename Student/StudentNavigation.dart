@@ -1,24 +1,22 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Admin/EventList.dart';
-import 'package:flutter_application_1/Admin/OrganizerList.dart';
-import 'package:flutter_application_1/Admin/StudentList.dart';
-import 'package:flutter_application_1/common/colors.dart';
+import 'package:flutter_application_1/Student/StudentEventDetail.dart';
+import 'package:flutter_application_1/Student/StudentEventResult.dart';
+import 'package:flutter_application_1/Student/StudentHome.dart';
+import 'package:flutter_application_1/Student/StudentResult.dart';
 
-class AdminNavigation extends StatefulWidget {
-  const AdminNavigation({super.key});
+class stdNav extends StatefulWidget {
+  const stdNav({super.key});
 
   @override
-  State<AdminNavigation> createState() => _AdminNavigationState();
+  State<stdNav> createState() => _stdNavState();
 }
 
-class _AdminNavigationState extends State<AdminNavigation> {
-   int _selectedIndex = 0;
+class _stdNavState extends State<stdNav> {
+  int _selectedIndex = 0;
   static const List<dynamic> _widgetoptions = [
-    StdList(),
-    organizerList(),
-    eventList()
-
+    stdHome(),
+    stdResult(),
+   
     
   ];
   @override
@@ -28,18 +26,14 @@ class _AdminNavigationState extends State<AdminNavigation> {
         bottomNavigationBar: BottomNavigationBar(
           items:  [
             BottomNavigationBarItem(
-                icon:Icon(Icons.person),
-                label: "Student",
-                backgroundColor: Color(0xFF204563),),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.groups),
-                label: "Organizer",
-                backgroundColor: Color(0xFF204563),),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.emoji_events_rounded),
+                icon:Icon(Icons.emoji_events),
                 label: "Event",
                 backgroundColor: Color(0xFF204563),),
-            
+            BottomNavigationBarItem(
+                icon: Icon(Icons.reviews_outlined),
+                label: "Result",
+                backgroundColor: Color(0xFF204563),),
+           
           ],
           backgroundColor: Color(0xFF204563),
           selectedIconTheme: IconThemeData(

@@ -1,24 +1,22 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Admin/EventList.dart';
-import 'package:flutter_application_1/Admin/OrganizerList.dart';
-import 'package:flutter_application_1/Admin/StudentList.dart';
-import 'package:flutter_application_1/common/colors.dart';
+import 'package:flutter_application_1/Organizer/OrganizerAppeal.dart';
+import 'package:flutter_application_1/Organizer/OrganizerAssign.dart';
+import 'package:flutter_application_1/Organizer/OrganizerEventParticipants.dart';
 
-class AdminNavigation extends StatefulWidget {
-  const AdminNavigation({super.key});
+class organizerNav extends StatefulWidget {
+  const organizerNav({super.key});
 
   @override
-  State<AdminNavigation> createState() => _AdminNavigationState();
+  State<organizerNav> createState() => _organizerNavState();
 }
 
-class _AdminNavigationState extends State<AdminNavigation> {
-   int _selectedIndex = 0;
+class _organizerNavState extends State<organizerNav> {
+  int _selectedIndex = 0;
   static const List<dynamic> _widgetoptions = [
-    StdList(),
-    organizerList(),
-    eventList()
-
+    orgAssign(),
+    eventParticipants(),
+    appeal(),
+   
     
   ];
   @override
@@ -28,16 +26,16 @@ class _AdminNavigationState extends State<AdminNavigation> {
         bottomNavigationBar: BottomNavigationBar(
           items:  [
             BottomNavigationBarItem(
-                icon:Icon(Icons.person),
-                label: "Student",
-                backgroundColor: Color(0xFF204563),),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.groups),
-                label: "Organizer",
+                icon:Icon(Icons.assignment_rounded),
+                label: "Assigned",
                 backgroundColor: Color(0xFF204563),),
             BottomNavigationBarItem(
                 icon: Icon(Icons.emoji_events_rounded),
                 label: "Event",
+                backgroundColor: Color(0xFF204563),),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.app_settings_alt),
+                label: "Appeal",
                 backgroundColor: Color(0xFF204563),),
             
           ],

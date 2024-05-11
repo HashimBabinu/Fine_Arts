@@ -33,88 +33,90 @@ class _stdEventResultState extends State<stdEventResult> {
         title: Text('Result',style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Mohiniyattam',style: TextStyle(fontWeight: FontWeight.bold),),
+              ],
+        
+            ),
+           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Date:'),
+              Text('17/03/2000',style: TextStyle(color: Colors.grey),)
+            ],
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Mohiniyattam',style: TextStyle(fontWeight: FontWeight.bold),),
+              Text('Stage No:'),
+              Text('02',style: TextStyle(color: Colors.grey),)
             ],
-
           ),
-         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Date:'),
-            Text('17/03/2000',style: TextStyle(color: Colors.grey),)
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Stage No:'),
-            Text('02',style: TextStyle(color: Colors.grey),)
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Time:'),
-            Text('9:00',style: TextStyle(color: Colors.grey),)
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Location:'),
-            Text('Ground',style: TextStyle(color: Colors.grey),)
-          ],
-        ),
-         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Result:',style: TextStyle(fontWeight: FontWeight.bold)),
-              ],
-            ),
-            SizedBox(height: 20),
-            _imageFile != null//image picker
-                ? Image.file(
-                    _imageFile!,
-                    height: 200,
-                    width: 200,
-                    fit: BoxFit.cover,
-                  )
-                : Container(
-                    height: 200,
-                    width: 200,
-                    color: Colors.grey[300],
-                    child: Center(
-                      child: Text('No Image Selected'),
-                    ),
-                  ),
-            SizedBox(height: 20),
-            TextButton(
-              onPressed: _pickImage,
-              child: Text(
-                'Select Image',
-                style: TextStyle(color: Colors.black),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Time:'),
+              Text('9:00',style: TextStyle(color: Colors.grey),)
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Location:'),
+              Text('Ground',style: TextStyle(color: Colors.grey),)
+            ],
+          ),
+           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Result:',style: TextStyle(fontWeight: FontWeight.bold)),
+                ],
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: Container(
-                width: 200,
-                height: 30,
-                decoration: BoxDecoration(
-                  color: Color(0xFF204563),
-                  border: Border.all(),
-                  borderRadius: BorderRadius.circular(5),
+              SizedBox(height: 20),
+              _imageFile != null//image picker
+                  ? Image.file(
+                      _imageFile!,
+                      height: 200,
+                      width: 200,
+                      fit: BoxFit.cover,
+                    )
+                  : Container(
+                      height: 200,
+                      width: 200,
+                      color: Colors.grey[300],
+                      child: Center(
+                        child: Text('No Image Selected'),
+                      ),
+                    ),
+              SizedBox(height: 20),
+              TextButton(
+                onPressed: _pickImage,
+                child: Text(
+                  'Select Image',
+                  style: TextStyle(color: Colors.black),
                 ),
-                child: Center(child: Text('Appeal',style: TextStyle(color: const Color.fromARGB(255, 244, 244, 244)),)),
-                ),
-                ),
-        ],
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20),
+                child: Container(
+                  width: 200,
+                  height: 30,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF204563),
+                    border: Border.all(),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Center(child: Text('Appeal',style: TextStyle(color: const Color.fromARGB(255, 244, 244, 244)),)),
+                  ),
+                  ),
+          ],
+        ),
       )
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Admin/AdminAddEvent.dart';
 import 'package:flutter_application_1/Admin/AdminAssign.dart';
+import 'package:flutter_application_1/Admin/AdminNavigation.dart';
 import 'package:flutter_application_1/Admin/AdminOganizerAssign.dart';
 import 'package:flutter_application_1/Admin/EventList.dart';
 import 'package:flutter_application_1/Admin/OrganizerDetail.dart';
@@ -18,6 +19,7 @@ import 'package:flutter_application_1/Organizer/OrganizerAssign.dart';
 import 'package:flutter_application_1/Organizer/OrganizerEditEvent.dart';
 import 'package:flutter_application_1/Organizer/OrganizerEventDetail.dart';
 import 'package:flutter_application_1/Organizer/OrganizerEventParticipants.dart';
+import 'package:flutter_application_1/Organizer/OrganizerNavigation.dart';
 import 'package:flutter_application_1/Organizer/OrganizerParticipantList.dart';
 import 'package:flutter_application_1/Organizer/OrganizerUpdateResult.dart';
 import 'package:flutter_application_1/Student/StudentApplyAppeal.dart';
@@ -25,7 +27,9 @@ import 'package:flutter_application_1/Student/StudentEventApply.dart';
 import 'package:flutter_application_1/Student/StudentEventDetail.dart';
 import 'package:flutter_application_1/Student/StudentEventResult.dart';
 import 'package:flutter_application_1/Student/StudentHome.dart';
+import 'package:flutter_application_1/Student/StudentNavigation.dart';
 import 'package:flutter_application_1/Student/StudentResult.dart';
+import 'package:flutter_application_1/sample.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,7 +47,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: stdApplyAppeal(),
+      home: stdNav(),
     );
   }
 }

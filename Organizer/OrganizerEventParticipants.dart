@@ -27,8 +27,7 @@ class _eventParticipantsState extends State<eventParticipants>  with SingleTicke
   Widget build(BuildContext context) {
     return Scaffold(
      appBar: AppBar(
-        title: Text('Event Participants'),
-        bottom: TabBar(
+        title: TabBar(
           controller: _tabController,
           tabs: [
             Tab(text: 'Event'), // Define each tab with its label

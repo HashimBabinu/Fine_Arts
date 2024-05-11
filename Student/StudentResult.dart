@@ -12,7 +12,7 @@ class _stdResultState extends State<stdResult> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Event',style: TextStyle(fontWeight: FontWeight.bold),),
+        title: Text('Result',style: TextStyle(fontWeight: FontWeight.bold),),
          centerTitle: true,
       ),
       body: SingleChildScrollView(
