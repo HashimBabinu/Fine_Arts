@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class eventList extends StatefulWidget {
-  const eventList({super.key});
+class appeal extends StatefulWidget {
+  const appeal({super.key});
 
   @override
-  State<eventList> createState() => _eventListState();
+  State<appeal> createState() => _appealState();
 }
 
-class _eventListState extends State<eventList> {
+class _appealState extends State<appeal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Event List'),
+        title: Text('Appeal'),
          centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -22,39 +22,29 @@ class _eventListState extends State<eventList> {
            
             ListView.builder(
               shrinkWrap: true, 
-              itemCount: 5,
+              itemCount: 2,
               itemBuilder: (context, index) {
                 return Container(
-                  decoration: BoxDecoration(color: Color(0xFF558DBB),border: Border.all(
+                  
+                  decoration: BoxDecoration(color: Color.fromARGB(255, 247, 247, 247),border: Border.all(
                     color: Colors.black12
                   ),borderRadius: BorderRadius.circular(5)
                   ),
                   child: ListTile(
                   
                     title: Text('Mohiniyattam'),
-                    subtitle: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [Text('Time:10:00'),
-                      Text('Stage:3')],
-                    ),
-                    trailing: Icon(Icons.delete),
+                    
+                    leading: Icon(Icons.image_outlined),
+                    
                    
                   ),
                 );
-                 
-              }
-                
+              },
             
             ),
             
-            
           ],
-          
         ),
-      ),
-      floatingActionButton: FloatingActionButton(onPressed: (){},
-      child: Icon(Icons.add),
-      backgroundColor: Colors.amber,
       ),
     );
   }

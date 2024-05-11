@@ -1,20 +1,16 @@
 import 'package:flutter/material.dart';
 
-class eventList extends StatefulWidget {
-  const eventList({super.key});
+class orgAssign extends StatefulWidget {
+  const orgAssign({super.key});
 
   @override
-  State<eventList> createState() => _eventListState();
+  State<orgAssign> createState() => _orgAssignState();
 }
 
-class _eventListState extends State<eventList> {
+class _orgAssignState extends State<orgAssign> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Event List'),
-         centerTitle: true,
-      ),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -31,17 +27,23 @@ class _eventListState extends State<eventList> {
                   ),
                   child: ListTile(
                   
-                    title: Text('Mohiniyattam'),
+                    title:Center(child: Text('Marghamkali',style: TextStyle(color: Colors.white),)),
                     subtitle: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [Text('Time:10:00'),
                       Text('Stage:3')],
                     ),
-                    trailing: Icon(Icons.delete),
+                    trailing: Column(
+                      children: [
+                        Icon(Icons.delete),
+                        Icon(Icons.edit_calendar_outlined)
+                      ],
+                    ),
+                   
+                    
                    
                   ),
                 );
-                 
               }
                 
             
@@ -49,12 +51,7 @@ class _eventListState extends State<eventList> {
             
             
           ],
-          
         ),
-      ),
-      floatingActionButton: FloatingActionButton(onPressed: (){},
-      child: Icon(Icons.add),
-      backgroundColor: Colors.amber,
       ),
     );
   }
